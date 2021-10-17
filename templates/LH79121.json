@@ -1,0 +1,90 @@
+{
+  "endpoints": [
+    {
+      "clusters": [
+        {
+          "attributes": [
+            {
+              "attribute": 8,
+              "data": {
+                "ac_fault": false,
+                "alarm1": false,
+                "alarm2": false,
+                "battery_defect": false,
+                "low_battery": false,
+                "restore": false,
+                "supervision": false,
+                "tamper": false,
+                "test_mode": false,
+                "trouble": false,
+                "disarmed": false,
+                "armed": false,
+                "athome": false
+              },
+              "name": "zone_status",
+              "type": "dict",
+              "value": {
+                "ac_fault": false,
+                "alarm1": false,
+                "alarm2": false,
+                "battery_defect": false,
+                "low_battery": false,
+                "restore": false,
+                "supervision": false,
+                "tamper": false,
+                "test_mode": false,
+                "trouble": false,
+                "disarmed": false,
+                "armed": false,
+                "athome": false
+              }
+            }
+          ],
+          "cluster": 1280
+        },
+        {
+          "attributes": [
+            {
+              "attribute": 4,
+              "data": "CSST-iHORN",
+              "name": "manufacturer",
+              "value": "CSST-iHORN"
+            },
+            {
+              "attribute": 5,
+              "data": "LH79121",
+              "name": "type",
+              "type": "str",
+              "value": "LH79121"
+            }
+          ],
+          "cluster": 0
+        }
+      ],
+      "device": 1027,
+      "endpoint": 1,
+      "in_clusters": [
+        0,
+        4,
+        3,
+        1280,
+        1282,
+        5,
+        65535
+      ],
+      "out_clusters": [
+        25
+      ],
+      "profile": 260
+    }
+  ],
+  "generictype": "remote",
+  "info": {
+    "mac_capability": "10001110",
+    "max_buffer": 127,
+    "max_rx": 100,
+    "max_tx": 100,
+    "power_type": 1,
+    "server_mask": 0
+  }
+}

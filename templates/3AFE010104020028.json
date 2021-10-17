@@ -1,0 +1,96 @@
+{
+  "endpoints": [
+    {
+      "clusters": [
+        {
+          "attributes": [
+            {
+              "attribute": 4,
+              "data": "Konke",
+              "name": "manufacturer",
+              "value": "Konke"
+            },
+            {
+              "attribute": 5,
+              "data": "3AFE010104020028",
+              "name": "type",
+              "type": "str",
+              "value": "3AFE010104020028"
+            }
+          ],
+          "cluster": 0
+        },
+        {
+          "attributes": [
+            {
+              "attribute": 0
+            },
+            {
+              "attribute": 65533
+            }
+          ],
+          "cluster": 3
+        },
+        {
+          "attributes": [
+            {
+              "attribute": 1,
+              "data": {
+                "ac_fault": false,
+                "alarm1": false,
+                "alarm2": false,
+                "battery_defect": false,
+                "low_battery": false,
+                "restore": false,
+                "supervision": false,
+                "tamper": false,
+                "test_mode": false,
+                "trouble": false,
+                "disarmed": false,
+                "armed": false,
+                "athome": false
+              },
+              "name": "zone_status",
+              "type": "dict",
+              "value": {
+                "ac_fault": false,
+                "alarm1": false,
+                "alarm2": false,
+                "battery_defect": false,
+                "low_battery": false,
+                "restore": false,
+                "supervision": false,
+                "tamper": false,
+                "test_mode": false,
+                "trouble": false,
+                "disarmed": false,
+                "armed": false,
+                "athome": false
+              }
+            }
+          ],
+          "cluster": 1280
+        }
+      ],
+      "device": 1026,
+      "endpoint": 1,
+      "in_clusters": [
+        0,
+        3,
+        1280,
+        64704
+      ],
+      "out_clusters": [
+        3,
+        64704
+      ],
+      "profile": 260
+    }
+  ],
+  "generictype": "sensor",
+  "info": {
+    "mac_capability": "10000000",
+    "power_type": 0,
+    "server_mask": 0
+  }
+}

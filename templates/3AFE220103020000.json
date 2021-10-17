@@ -1,0 +1,79 @@
+{
+  "endpoints": [
+    {
+      "clusters": [
+        {
+          "attributes": [
+            {
+              "attribute": 4,
+              "data": "Konke",
+              "name": "manufacturer",
+              "value": "Konke"
+            },
+            {
+              "attribute": 5,
+              "data": "3AFE220103020000",
+              "name": "type",
+              "type": "str",
+              "value": "3AFE220103020000"
+            }
+          ],
+          "cluster": 0
+        },
+        {
+          "attributes": [
+            {
+              "attribute": 0,
+              "data": 5684,
+              "name": "humidity",
+              "type": "float",
+              "unit": "%",
+              "value": 56.84
+            },
+            {
+              "attribute": 1
+            },
+            {
+              "attribute": 2
+            },
+            {
+              "attribute": 65533
+            }
+          ],
+          "cluster": 1029
+        },
+        {
+          "attributes": [
+            {
+              "attribute": 0,
+              "data": 2849,
+              "name": "temperature",
+              "type": "float",
+              "unit": "°C",
+              "value": 28.49
+            }
+          ],
+          "cluster": 1026
+        }
+      ],
+      "device": 770,
+      "endpoint": 1,
+      "in_clusters": [
+        0,
+        1,
+        3,
+        1026,
+        1029
+      ],
+      "out_clusters": [
+        3
+      ],
+      "profile": 260
+    }
+  ],
+  "generictype": "sensor",
+  "info": {
+    "mac_capability": "10000000",
+    "power_type": 0
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "endpoints": [
+    {
+      "clusters": [
+        {
+          "attributes": [
+            {
+              "attribute": 6,
+              "data": {
+                "ac_fault": false,
+                "alarm1": false,
+                "alarm2": false,
+                "battery_defect": false,
+                "low_battery": false,
+                "restore": false,
+                "supervision": false,
+                "tamper": false,
+                "test_mode": false,
+                "trouble": false,
+                "disarmed": false,
+                "armed": false,
+                "athome": false
+              },
+              "name": "zone_status",
+              "type": "dict",
+              "value": {
+                "ac_fault": false,
+                "alarm1": false,
+                "alarm2": false,
+                "battery_defect": false,
+                "low_battery": false,
+                "restore": false,
+                "supervision": false,
+                "tamper": false,
+                "test_mode": false,
+                "trouble": false,
+                "disarmed": false,
+                "armed": false,
+                "athome": false
+              }
+            }
+          ],
+          "cluster": 1280
+        },
+        {
+          "attributes": [
+            {
+              "attribute": 4,
+              "data": "CSST-iHORN",
+              "name": "manufacturer",
+              "value": "CSST-iHORN"
+            },
+            {
+              "attribute": 5,
+              "data": "LH05121",
+              "name": "type",
+              "type": "str",
+              "value": "LH05121"
+            }
+          ],
+          "cluster": 0
+        }
+      ],
+      "device": 0,
+      "endpoint": 1,
+      "in_clusters": [],
+      "out_clusters": [],
+      "profile": 0
+    }
+  ],
+  "generictype": "sensor",
+  "info": {
+    "mac_capability": "10001110",
+    "rejoin_status": false,
+    "power_type": 0
+  }
+}

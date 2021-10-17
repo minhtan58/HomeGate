@@ -1,0 +1,85 @@
+{
+  "endpoints": [
+    {
+      "clusters": [
+        {
+          "attributes": [
+            {
+              "attribute": 6,
+              "data": {
+                "ac_fault": false,
+                "alarm1": false,
+                "alarm2": false,
+                "battery_defect": false,
+                "low_battery": false,
+                "restore": false,
+                "supervision": false,
+                "tamper": false,
+                "test_mode": false,
+                "trouble": false,
+                "disarmed": false,
+                "armed": false,
+                "athome": false
+              },
+              "name": "zone_status",
+              "type": "dict",
+              "value": {
+                "ac_fault": false,
+                "alarm1": false,
+                "alarm2": false,
+                "battery_defect": false,
+                "low_battery": false,
+                "restore": false,
+                "supervision": false,
+                "tamper": false,
+                "test_mode": false,
+                "trouble": false,
+                "disarmed": false,
+                "armed": false,
+                "athome": false
+              }
+            }
+          ],
+          "cluster": 1280
+        },
+        {
+          "attributes": [
+            {
+              "attribute": 4,
+              "data": "DICOM",
+              "name": "manufacturer",
+              "value": "DICOM"
+            },
+            {
+              "attribute": 5,
+              "data": "DS-3WM",
+              "name": "type",
+              "type": "str",
+              "value": "DS-3WM"
+            }
+          ],
+          "cluster": 0
+        }
+      ],
+      "device": 0,
+      "endpoint": 1,
+      "in_clusters": [
+          0,
+          4,
+          3,
+          6,
+          1280
+      ],
+      "out_clusters": [
+          1280
+      ],
+      "profile": 260
+    }
+  ],
+  "generictype": "sensor",
+  "info": {
+    "mac_capability": "10001110",
+    "rejoin_status": false,
+    "power_type": 0
+  }
+}

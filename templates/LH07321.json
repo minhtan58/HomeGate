@@ -1,0 +1,84 @@
+{
+  "endpoints": [
+    {
+      "clusters": [
+        {
+          "attributes": [
+            {
+              "attribute": 8,
+              "data": {
+                "ac_fault": false,
+                "alarm1": false,
+                "alarm2": false,
+                "battery_defect": false,
+                "low_battery": false,
+                "restore": false,
+                "supervision": false,
+                "tamper": false,
+                "test_mode": false,
+                "trouble": false
+              },
+              "name": "zone_status",
+              "type": "dict",
+              "value": {
+                "ac_fault": false,
+                "alarm1": false,
+                "alarm2": false,
+                "battery_defect": false,
+                "low_battery": false,
+                "restore": false,
+                "supervision": false,
+                "tamper": false,
+                "test_mode": false,
+                "trouble": false,
+                "disarmed": false,
+                "armed": false,
+                "athome": false
+              }
+            }
+          ],
+          "cluster": 1280
+        },
+        {
+          "attributes": [
+            {
+              "attribute": 4,
+              "data": "CSST-iHORN",
+              "name": "manufacturer",
+              "value": "CSST-iHORN"
+            },
+            {
+              "attribute": 5,
+              "data": "LH07321",
+              "name": "type",
+              "type": "str",
+              "value": "LH07321"
+            }
+          ],
+          "cluster": 0
+        }
+      ],
+      "device": 1027,
+      "endpoint": 1,
+      "in_clusters": [
+        0,
+        4,
+        3,
+        1280,
+        1282,
+        5,
+        65535
+      ],
+      "out_clusters": [
+        25
+      ],
+      "profile": 260
+    }
+  ],
+  "generictype": "alarm",
+  "info": {
+    "mac_capability": "10001110",
+    "rejoin_status": false,
+    "power_type": 1
+  }
+}

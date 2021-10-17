@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+# Config Manager
+#
+# Copyright (c) 2020 Ivan , Dicom Iots
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+from ConfigManager import ConfigManager
+import json
+import re
+from bottle import default_app, auth_basic, request, response, post, put, get ,run
+
+app = application = default_app()
+
+namepattern = re.compile(r'^[a-zA-Z\d]{1,64}$')
+
+def check(user, pw):
+    if re.match(r'[A-Za-z0-9@#$%^&+=]{10,}', user) and re.match(r'[A-Za-z0-9!@#$%^&+=]{20,}', pw):
+       if user == "#4f3%9AF&j" and pw == "gy4FHn%S%z^uLRJ!6=Vp":
+          return True
+
+@app.route('/')
+@auth_basic(check)
+def home():
+    pass
+
+@get('/system/info')
+@auth_basic(check)
+def listing_handler():
+    '''Handles name listing'''
+
+    response.headers['Content-Type'] = 'application/json'
+    response.headers['Cache-Control'] = 'no-cache'
+
+    return json.dumps({"status":"success", "results":ConfigManager().system_info()})
+
+@get('/wifi/scan')
+@auth_basic(check)
+def listing_handler():
+    '''Handles wifi scan listing'''
+    response.headers['Content-Type'] = 'application/json'
+    response.headers['Cache-Control'] = 'no-cache'
+    raw = json.loads(ConfigManager().scan_wifi())
+    if raw is None:
+       return json.dumps({ "status":"error","message":"Not found wifi network"})
+    else:
+       raw['status'] = "success"
+       return json.dumps(raw)
+@post('/wifi/set')
+@auth_basic(check)
+def add_handler():
+    '''Handles name updates'''
+        # parse input data
+    raw = (request.body).read()
+    data = json.loads(raw.decode('UTF-8'))
+    if data is None:
+       response.status = 400
+    ssid = data.get("ssid","")
+    bssid = data.get("bssid","")
+    psk = data.get("psk","")
+    password = data.get("password","")
+    message = ConfigManager().add_wifi(ssid,bssid,psk,password)
+    response.headers['Content-Type'] = 'application/json'
+    if message == "success":
+       return json.dumps({ "status":"success","message":"Connect wifi network and reboot"})
+    else:
+        return json.dumps({ "status":"error","message":message})
+@auth_basic(check)
+@post('/h9odHqYrjBUHtKpNgVvNYqWL8aA3B7DZJMC1eSuxZDs')
+def add_handler():
+    error = json.dumps({ "status":"error","message":message})
+    data = (request.body).read()
+    data = json.loads(raw.decode('UTF-8'))
+    if data is None:
+       response.status = 400
+    message = ConfigManager().config_system(data.get("data",""))
+    response.headers['Content-Type'] = 'application/json'
+    if message == "success":
+       return json.dumps({ "status":"success","message":"Config success"})
+    else:
+        return error
+
+if __name__ == '__main__':
+    run(host = '0.0.0.0', port = 9999)
